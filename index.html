@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safia Masbah — Cabinet d'Orthophonie Guéliz, Marrakech</title>
+    <meta name="description" content="Cabinet d'orthophonie de Safia Masbah à Marrakech Guéliz. Diplômée de l'IHEPS. Accompagnement personnalisé et bienveillant pour enfants, adolescents et adultes.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons for Premium UI Elements -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Background Decorative Gradients -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo-area" id="nav-logo-link">
+                <img src="assets/logo.jpg" alt="Logo Cabinet Orthophonie" class="logo-img">
+                <div class="logo-text">
+                    <span class="brand-name">Safia Masbah</span>
+                    <span class="brand-sub">Orthophoniste</span>
+                </div>
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Ouvrir le menu" id="mobile-toggle">
+                <i data-lucide="menu"></i>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#accueil" class="nav-link active" data-page="accueil">Accueil</a>
+                <a href="#a-propos" class="nav-link" data-page="a-propos">À Propos</a>
+                <a href="#contact" class="nav-link nav-cta" data-page="contact">Prendre RDV</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-content">
+        
+        <!-- PAGE 1: ACCUEIL -->
+        <section id="page-accueil" class="page-section active">
+            <div class="hero-container">
+                <div class="hero-text-content">
+                    <div class="badge">Cabinet d'Orthophonie • Guéliz Marrakech</div>
+                    <h1>Parler, comprendre et communiquer avec <span class="highlight-text">confiance</span>.</h1>
+                    <p class="hero-lead">Accompagnement personnalisé et bienveillant pour les enfants, adolescents et adultes. Libérons la parole et surmontons ensemble les troubles du langage, de la voix et de la communication.</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-icon" onclick="navigateToPage('contact')">
+                            Demander un rendez-vous <i data-lucide="calendar"></i>
+                        </button>
+                        <button class="btn btn-secondary" onclick="navigateToPage('a-propos')">
+                            Découvrir le cabinet
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-illustration">
+                    <div class="illustration-card">
+                        <div class="ill-icon-container">
+                            <i data-lucide="message-square" class="ill-icon"></i>
+                        </div>
+                        <div class="ill-wave">
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                        </div>
+                        <p class="ill-quote">"Chaque voix mérite d'être entendue et comprise."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interventions / Specialties (from Business Card back) -->
+            <div class="section-divider">
+                <h2>Bilans & Rééducation Orthophonique</h2>
+                <p class="sub-heading">Un accompagnement personnalisé et bienveillant à chaque étape de la vie.</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i data-lucide="baby"></i></div>
+                        <h3>Retard du Langage & Parole</h3>
+                        <p>Dépistage et rééducation des retards d'acquisition du langage oral et des difficultés d'articulation chez les tout-petits.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i data-lucide="book-open"></i></div>
+                        <h3>Langage Oral & Écrit</h3>
+                        <p>Prise en charge des troubles d'apprentissage de la lecture, de l'orthographe (dyslexie, dysorthographie) et des difficultés de compréhension.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i data-lucide="activity"></i></div>
+                        <h3>Bégaiement</h3>
+                        <p>Accompagnement et rééducation des troubles de la fluence pour restaurer une parole fluide et réduire l'anxiété liée à la communication.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i data-lucide="brain"></i></div>
+                        <h3>Troubles Neurologiques</h3>
+                        <p>Réadaptation des troubles du langage (aphasie) et de la communication consécutifs à des lésions cérébrales ou des pathologies neurologiques.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i data-lucide="smile"></i></div>
+                        <h3>Déglutition</h3>
+                        <p>Rééducation des troubles de la déglutition atypique chez l'enfant (souvent en lien avec un traitement orthodontique) et l'adulte.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 2: À PROPOS -->
+        <section id="page-a-propos" class="page-section">
+            <div class="about-container">
+                <div class="about-image-side">
+                    <div class="image-wrapper">
+                        <img src="assets/therapist.jpg" alt="Safia Masbah, Orthophoniste" class="profile-photo">
+                    </div>
+                </div>
+                <div class="about-text-side">
+                    <div class="badge">À Propos de la Praticienne</div>
+                    <h2>Safia Masbah</h2>
+                    <p class="about-title">Orthophoniste diplômée de l'IHEPS Marrakech</p>
+                    
+                    <p class="about-text">
+                        En tant qu'orthophoniste clinicienne, j'accueille mes patients au sein de mon cabinet situé à Guéliz, Marrakech. Mon rôle est d'accompagner chaque personne — enfant, adolescent ou adulte — vers une communication épanouie et sereine.
+                    </p>
+                    <p class="about-text">
+                        Chaque individu est unique. C'est pourquoi je construis des projets thérapeutiques sur-mesure, basés sur des bilans précis et des techniques de rééducation adaptées. Mon objectif est de proposer un espace de soin chaleureux et stimulant où le patient progresse à son rythme.
+                    </p>
+
+                    <div class="values-list">
+                        <div class="value-item">
+                            <div class="value-bullet"><i data-lucide="heart"></i></div>
+                            <div>
+                                <h4>Approche Bienveillante</h4>
+                                <p>Un accompagnement respectueux et à l'écoute des besoins et du rythme de chaque patient.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-bullet"><i data-lucide="users"></i></div>
+                            <div>
+                                <h4>Partenariat Familial</h4>
+                                <p>Collaboration étroite avec l'entourage et les équipes pédagogiques pour maximiser les progrès au quotidien.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="qualification-box">
+                        <i data-lucide="graduation-cap"></i>
+                        <div>
+                            <strong>Diplômes & Formation</strong>
+                            <p>Diplômée de l'IHEPS (Institut des Hautes Études Physiques et Sensorielles) à Marrakech. Formation continue sur les troubles de la fluence et la déglutition atypique.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Path / Steps -->
+            <div class="section-divider">
+                <h2>Le parcours de soin en cabinet</h2>
+                <div class="steps-flow">
+                    <div class="step-card">
+                        <span class="step-number">01</span>
+                        <h4>L'Anamnèse & Bilan</h4>
+                        <p>Un premier entretien approfondi suivi de tests cliniques pour poser un diagnostic précis et cibler les besoins.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">02</span>
+                        <h4>Le Plan de Rééducation</h4>
+                        <p>Conception d'un programme d'exercices ciblés et définition des modalités des séances.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">03</span>
+                        <h4>Le Suivi Régulier</h4>
+                        <p>Des séances interactives et ludiques (pour les enfants) visant à acquérir des stratégies durables de communication.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3: CONTACT & RENDEZ-VOUS -->
+        <section id="page-contact" class="page-section">
+            <div class="contact-container">
+                <!-- Contact Info Side -->
+                <div class="contact-info-side">
+                    <div class="badge">Contact & Horaires</div>
+                    <h2>Cabinet d'Orthophonie Safia Masbah</h2>
+                    <p class="contact-lead">Le cabinet est situé au cœur de Guéliz à Marrakech. Les consultations se font exclusivement sur rendez-vous. N'hésitez pas à demander un créneau en ligne ou à téléphoner directement.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-info-item">
+                            <div class="info-icon"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <h4>Adresse du Cabinet</h4>
+                                <p>Imm Asmae, 5ème Étage N°49, Guéliz, Marrakech</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="info-icon"><i data-lucide="phone"></i></div>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <p><a href="tel:+212619292686">06 19 29 26 86</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="info-icon"><i data-lucide="mail"></i></div>
+                            <div>
+                                <h4>Adresse E-mail</h4>
+                                <p><a href="mailto:safiamasbah5@gmail.com">safiamasbah5@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="info-icon"><i data-lucide="calendar-check"></i></div>
+                            <div>
+                                <h4>Modalités</h4>
+                                <p>Consultations sur rendez-vous uniquement</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mockup Map Visual for Marrakech Guéliz -->
+                    <div class="mockup-map">
+                        <div class="map-overlay">
+                            <i data-lucide="map-pin" class="map-pin-pulse"></i>
+                            <div class="map-tooltip">Cabinet Safia Masbah (Guéliz)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Appointment Form Side -->
+                <div class="contact-form-side">
+                    <div class="form-card">
+                        <h3>Demande de rendez-vous</h3>
+                        <p class="form-sub">Remplissez ce formulaire de contact. Je prendrai contact avec vous dans les plus brefs délais pour convenir d'une date de consultation.</p>
+                        
+                        <form id="appointment-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="lastname">Nom <span class="required">*</span></label>
+                                    <input type="text" id="lastname" required placeholder="Ex: El Amrani">
+                                    <span class="error-msg">Ce champ est requis</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstname">Prénom <span class="required">*</span></label>
+                                    <input type="text" id="firstname" required placeholder="Ex: Amina">
+                                    <span class="error-msg">Ce champ est requis</span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">E-mail <span class="required">*</span></label>
+                                    <input type="email" id="email" required placeholder="nom@email.com">
+                                    <span class="error-msg">Veuillez entrer une adresse e-mail valide</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Téléphone <span class="required">*</span></label>
+                                    <input type="tel" id="phone" required placeholder="06 12 34 56 78" pattern="[0-9\s]{10,20}">
+                                    <span class="error-msg">Veuillez entrer un numéro de téléphone valide</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="patient-type">Le patient est : <span class="required">*</span></label>
+                                <select id="patient-type" required>
+                                    <option value="" disabled selected>Choisir une option...</option>
+                                    <option value="enfant">Un enfant / adolescent (accompagné d'un parent)</option>
+                                    <option value="adulte">Un adulte</option>
+                                </select>
+                                <span class="error-msg">Ce choix est requis</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reason">Motif de consultation : <span class="required">*</span></label>
+                                <select id="reason" required>
+                                    <option value="" disabled selected>Sélectionner un motif...</option>
+                                    <option value="retard-langage">Retard du langage et de la parole</option>
+                                    <option value="langage-oral-ecrit">Trouble du langage oral et écrit (Dyslexie...)</option>
+                                    <option value="begaiement">Bégaiement (trouble de la fluence)</option>
+                                    <option value="troubles-neuro">Troubles neurologiques (aphasie...)</option>
+                                    <option value="deglutition">Troubles de la déglutition</option>
+                                    <option value="autre">Autre motif</option>
+                                </select>
+                                <span class="error-msg">Ce choix est requis</span>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pref-date">Date souhaitée (indicatif)</label>
+                                    <input type="date" id="pref-date">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pref-time">Créneau horaire préféré</label>
+                                    <select id="pref-time">
+                                        <option value="matin">Matinée</option>
+                                        <option value="apres-midi">Après-midi</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Informations complémentaires :</label>
+                                <textarea id="message" rows="4" placeholder="Précisez ici les difficultés rencontrées ou vos questions..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block btn-icon" id="submit-btn">
+                                Envoyer la demande de rendez-vous <i data-lucide="send"></i>
+                            </button>
+                        </form>
+
+                        <!-- Success Popup Modal -->
+                        <div class="form-success-overlay" id="success-message">
+                            <div class="success-card">
+                                <div class="success-icon"><i data-lucide="check-circle-2"></i></div>
+                                <h3>Demande envoyée !</h3>
+                                <p>Merci <span id="success-name"></span>. Votre message a bien été transmis à Safia Masbah.</p>
+                                <p class="success-detail">Je reviendrai vers vous par téléphone sous 24h à 48h.</p>
+                                <button class="btn btn-primary" onclick="closeSuccessMessage()">Fermer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-title">Cabinet d'Orthophonie Safia Masbah</span>
+                <p>Accompagner, rééduquer et donner confiance par la parole.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#accueil" onclick="navigateToPage('accueil')">Accueil</a>
+                <a href="#a-propos" onclick="navigateToPage('a-propos')">À Propos</a>
+                <a href="#contact" onclick="navigateToPage('contact')">Prendre RDV</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cabinet d'Orthophonie Safia Masbah. Conçu avec soin.</p>
+                <p class="legals">Orthophoniste Marrakech Guéliz • Diplômée de l'IHEPS</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
