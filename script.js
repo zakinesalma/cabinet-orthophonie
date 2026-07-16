@@ -160,24 +160,48 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Affichage de la confirmation si le formulaire est correct
+            // Envoi des données si le formulaire est valide
             if (isFormValid) {
-                const firstnameVal = document.getElementById('firstname').value;
-                const lastnameVal = document.getElementById('lastname').value;
+                const submitBtn = document.getElementById('submit-btn');
+                const originalBtnText = submitBtn.innerHTML;
                 
-                successNameSpan.textContent = `${firstnameVal} ${lastnameVal}`;
-                successOverlay.classList.add('show');
+                // Désactiver le bouton et afficher l'état de chargement
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = 'Envoi en cours...';
                 
-                console.log('Demande de rendez-vous reçue pour Safia Masbah:', {
-                    nom: lastnameVal,
-                    prenom: firstnameVal,
-                    email: document.getElementById('email').value,
-                    telephone: document.getElementById('phone').value,
-                    typePatient: document.getElementById('patient-type').value,
-                    motif: document.getElementById('reason').value,
-                    dateSouhaitee: document.getElementById('pref-date').value,
-                    creneau: document.getElementById('pref-time').value,
-                    message: document.getElementById('message').value
+                const form = appointmentForm;
+                const data = new FormData(form);
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons();
+                    }
+
+                    if (response.ok) {
+                        const firstnameVal = document.getElementById('firstname').value;
+                        const lastnameVal = document.getElementById('lastname').value;
+                        
+                        successNameSpan.textContent = `${firstnameVal} ${lastnameVal}`;
+                        successOverlay.classList.add('show');
+                        form.reset();
+                    } else {
+                        alert("Une erreur est survenue lors de l'envoi. Veuillez réessayer.");
+                    }
+                }).catch(error => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons();
+                    }
+                    alert("Erreur de connexion. Veuillez vérifier votre réseau internet.");
                 });
             }
         });
